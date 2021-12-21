@@ -1,0 +1,10 @@
+<div class="container">
+  <h2 *ngIf="loading">Is Loading....</h2>
+  <ng-container *ngIf="!loading">
+    <div class="row">
+      <div class="col-3" *ngFor="let image of data">
+        <img src="{{ image.thumbnailUrl }}" alt="" style="width: 100px; height: 100px;">
+      </div>
+    </div>
+  </ng-container>
+</div>
